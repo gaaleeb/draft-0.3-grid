@@ -1,0 +1,126 @@
+/* Remove default margin */
+*{margin: 0;}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* grid basis- "display:grid" - it is to apply grid & min-height's vh unit allows to take browser's whole page */
+body {
+    display: grid;
+    min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-color: grey;
+  box-sizing: border-box;
+}
+
+
+.grid-abba{
+    display: grid;
+    /* gap: 1.5rem;  */
+    grid-template-areas: 
+    "one"
+    "two"
+    "three"
+    "four"
+    "five";
+
+    /* grid-template-columns: repeat(4, 1fr); */
+    /* grid-template-rows: repeat(2, 1fr); */
+
+    text-align: center;
+    padding-block: 1.5rem;
+    width: min(95%, 70rem);
+    /*margin-inline is here to center the whole class */
+    margin-inline: auto;
+
+}
+
+.grid{
+    padding: 2rem; 
+    /* one value indicates top and bottom */
+}
+
+/* .two-columns{
+    grid-column: span 2;
+} */
+
+h1{
+    color:aliceblue;
+}
+
+
+.a{
+    background-color: purple;
+    grid-area: one;   
+}
+
+.b{
+    background-color: blue;   
+    grid-area: two;
+}
+
+.c{
+    background-color: green;
+    grid-area: three;
+}
+
+.d{
+    background-color: orange;
+    grid-area: four;
+}
+
+.e{
+    background-color: black;
+    grid-area: five;
+    /* grid-column-start: 4;
+    grid-row-start: 1;
+    grid-row-end: 3; */
+}
+
+
+@media screen and (min-width: 33em){
+    .grid-abba{
+        grid-template-areas: 
+        "one "
+      "two "
+      "three"
+      "four"
+      "five";
+    }
+}
+
+@media screen and (min-width: 38em){
+    .grid-abba{
+        grid-template-areas: 
+        'one one'
+     'two five'
+     'three five'
+     'four four';
+    }
+}
+
+@media screen and (min-width: 54em){
+    .grid-abba{
+        grid-template-areas: 
+        "one one two"
+      "five five five"
+      "three four four";
+
+}
+
+@media screen and (min-width: 75em){
+    .grid-abba{
+        grid-template-areas: 
+        "one one two five"
+        "three four four five";
+    }
+}
