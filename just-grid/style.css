@@ -1,0 +1,95 @@
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    display: grid;
+    min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-color: grey;
+  box-sizing: border-box;
+}
+
+
+
+
+h1{
+    color:aliceblue;
+}
+
+
+.a{
+    background-color: purple;   
+}
+
+.b{
+    background-color: blue;   
+}
+
+.c{
+    background-color: green;
+}
+
+.d{
+    background-color: orange;
+}
+
+.e{
+    background-color: black;
+    grid-column-start: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+
+
+
+
+
+
+.grid-abba{
+    display: grid;
+    gap: 1.5rem;
+
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: repeat(2, 1fr); */
+
+    text-align: center;
+    padding-block: 1.5rem;
+    width: min(95%, 70rem);
+     /* min-height: 100vh;  */
+    margin-inline: auto;
+}
+
+.grid{
+    padding: 2rem; 
+    /* one value indicates top and bottom */
+}
+
+.two-columns{
+    grid-column: span 2;
+}
+
